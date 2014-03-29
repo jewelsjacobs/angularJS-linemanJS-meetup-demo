@@ -1,0 +1,19 @@
+{
+  "name": "angularJS-linemanJS-meetup-demo",
+  "title": "An HTML/JS/CSS app using Angular.JS",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Julia Jacobs",
+    "company": "Rackspace"
+  },
+  "dependencies": {
+    "express": "^3.5.0",
+    "lodash": "~2.4.1",
+    "coffee-script": "^1.7.1",
+    "ejs": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
