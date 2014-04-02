@@ -109,14 +109,14 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
-              <p>uncomment if you want to see an example of a route that resolves a request prior to rendering
-resolve:
-  books : (BookService) -&gt;
-    BookService.get()</p>
+              <p>uncomment if you want to see an example of a route that resolves a request prior to rendering</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-attribute">resolve</span>:
+     books : <span class="hljs-function"><span class="hljs-params">(BookService)</span> -&gt;</span>
+       BookService.get()
+
   $routeProvider.otherwise <span class="hljs-attribute">redirectTo</span>: <span class="hljs-string">"/login"</span>
   <span class="hljs-keyword">return</span></pre></div></div>
             
