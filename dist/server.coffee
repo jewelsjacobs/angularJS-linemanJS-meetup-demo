@@ -19,6 +19,8 @@ app.use app.router
 app.configure "production", ->
   app.set "views", __dirname
   app.use express.static(__dirname)
+
+app.configure "production", ->
   app.use (req, res) ->
     res.render "index.html"
 
