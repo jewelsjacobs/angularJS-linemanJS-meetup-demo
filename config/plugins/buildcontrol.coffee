@@ -8,6 +8,6 @@ module.exports = (lineman) ->
         message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
       heroku:
         options:
-          remote: 'git@heroku.demo:agile-gorge-2138.git',
+          remote: 'git@heroku.com:agile-gorge-2138.git',
           branch: 'master',
           tag: '<%= pkg.version %>'
