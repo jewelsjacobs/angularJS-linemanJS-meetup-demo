@@ -4,7 +4,7 @@ module.exports = (lineman) ->
       server:
         files: [
           expand: true
-          cwd: "./"
-          src: "package.json"
-          dest: 'server'
+          cwd: "server"
+          src: "**"
+          dest: 'dist'
         ]

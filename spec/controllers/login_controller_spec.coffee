@@ -1,19 +1,34 @@
-describe "controller: LoginController ($httpBackend.expect().respond, vanilla jasmine, coffeescript)", ->
+describe "controller: LoginController ($httpBackend.expect().respond, vanilla jasmine, javascript)", ->
+  beforeEach ->
+    module "app"
+    return
 
-  beforeEach -> module("app")
+  beforeEach inject(($controller, $rootScope, $location, AuthenticationService, $httpBackend) ->
+    @$location = $location
+    @$httpBackend = $httpBackend
+    @scope = $rootScope.$new()
+    @redirect = spyOn($location, "path")
+    $controller "LoginController",
+      $scope: @scope
+      $location: $location
+      AuthenticationService: AuthenticationService
 
-  beforeEach inject ($controller, $rootScope, @$location, AuthenticationService, @$httpBackend) ->
-    @scope    = $rootScope.$new()
-    @redirect = spyOn($location, 'path')
-    $controller('LoginController', {$scope: @scope, $location, AuthenticationService})
-
+    return
+  )
   afterEach ->
     @$httpBackend.verifyNoOutstandingRequest()
     @$httpBackend.verifyNoOutstandingExpectation()
+    return
 
   describe "successfully logging in", ->
     it "should redirect you to /home", ->
-      @$httpBackend.expectPOST('/login', @scope.credentials).respond(200)
+      @$httpBackend.expectPOST("/login", @scope.credentials).respond 200
       @scope.login()
       @$httpBackend.flush()
-      expect(@redirect).toHaveBeenCalledWith('/home')
+      expect(@redirect).toHaveBeenCalledWith "/home"
+      return
+
+    return
+
+  return
+

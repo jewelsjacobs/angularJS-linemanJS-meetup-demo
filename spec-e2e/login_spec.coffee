@@ -12,7 +12,7 @@ describe "my angular app", ->
       Given -> ptor.findElement(protractor.By.input("credentials.password")).sendKeys "Wiggum"
       When -> ptor.findElement(protractor.By.id("log-in")).click()
       Then -> ptor.findElement(protractor.By.binding("{{ message }}")).getText().then (text) ->
-          expect(text).toEqual "Mouse Over these images to see a directive at work"
+        expect(text).toEqual "Mouse Over these images to see a directive at work"
 
 
 

@@ -1,19 +1,32 @@
 {
-  "name": "lineman-angular-template",
+  "name": "angularJS-linemanJS-meetup-demo",
   "title": "An HTML/JS/CSS app using Angular.JS",
   "version": "0.0.1",
   "private": true,
   "author": {
-    "name": "John Doe",
-    "company": "ACME, Inc."
+    "name": "Julia Jacobs",
+    "company": "Rackspace"
+  },
+  "dependencies": {
+    "express": "^3.5.0",
+    "lodash": "~2.4.1",
+    "coffee-script": "^1.7.1",
+    "ejs": "^1.0.0"
   },
   "devDependencies": {
     "protractor": ">=0.8.0",
     "jasmine-given": "~2.1.0",
-    "lineman": ">= 0.28.0",
+    "lineman": "git://github.com/linemanjs/lineman.git#grunt-contrib-watch",
+    "lineman-livereload": "git://github.com/linemanjs/lineman-livereload.git",
     "lineman-angular": ">= 0.2.0",
     "lineman-less": "0.0.1",
-    "coffee-script": "~1.6.3"
+    "lineman-bower": "0.0.3",
+    "lineman-coffeelint": "^0.1.1",
+    "lineman-docs": "0.0.6",
+    "open": "0.0.4",
+    "grunt-open": "^0.2.3",
+    "grunt": "^0.4.4",
+    "grunt-build-control": "^0.1.2"
   },
   "scripts": {
     "start": "lineman run",

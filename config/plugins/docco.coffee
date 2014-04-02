@@ -3,7 +3,6 @@ module.exports = (lineman) ->
     docco:
       src: [
         "app/js/**/*.coffee"
-        "server/**/*.coffee"
       ]
       options:
         output: 'docs/'
