@@ -1,6 +1,4 @@
-# A Lineman JS Template using Angular
-
-[![Build Status](https://travis-ci.org/linemanjs/lineman-angular-template.png?branch=master)](https://travis-ci.org/linemanjs/lineman-angular-template)
+# Demo for Austin AngularJS Meetup on how to use LinemanJS in an AngularJS app
 
 This is a project template for Angular JS applications using [Lineman](http://www.linemanjs.com).
 
@@ -17,14 +15,23 @@ It includes the following features:
 9. [Unit Tests](https://github.com/linemanjs/lineman-angular-template/tree/master/spec) and [End-to-End Tests](https://github.com/linemanjs/lineman-angular-template/tree/master/spec-e2e)
 10. Configuration to run [Protractor](https://github.com/juliemr/protractor) for End-to-End Tests
 
+# Shown in Demo
+
+1. Plugins
+2. Configuration
+3. AngularJS
+4. Run / Build
+
 # Instructions
 
-1. `git clone https://github.com/linemanjs/lineman-angular-template.git my-lineman-app`
+1. `git clone git@github.com:jewelsjacobs/angularJS-linemanJS-meetup-demo.git my-lineman-app`
 2. `cd my-lineman-app`
 3. `sudo npm install -g lineman`
-4. `npm install`
-5. `lineman run`
-6. open your web browser to localhost:8000
+4. `sudo npm install -g bower`
+5. `npm install`
+6. `bower install`
+7. `lineman run`
+8. open your web browser to localhost:8000
 
 # Running Tests
 
@@ -52,30 +59,3 @@ To run the end-to-end tests:
     If you see this error: Fatal error: The path to the driver executable must be set by the
     webdriver.chrome.driver system property, you may need to download the chromedriver
     (https://code.google.com/p/selenium/wiki/ChromeDriver) and place it in /usr/local/bin (mac).
-
-# Defining your apps angular.module in CoffeeScript
-
-If you are using Coffeescript to define the angular.module for your app, you will need to swap the concat order in `config/application.js` such that coffeescript files are included _before_ javascript. (If you are using JavaScript for defining the angular.module the default concat order is fine).
-
-Add the following `concat_sourcemap` block to `config/application.js` if you want to define your app module in coffeescript:
-
-```javascript
-module.exports = function(lineman) {
-  return {
-
-    concat_sourcemap: {
-      js: {
-        src: [
-          "<%= files.js.vendor %>",
-          "<%= files.coffee.generated %>",
-          "<%= files.js.app %>",
-          "<%= files.ngtemplates.dest %>"
-        ]
-      }
-    }
-
-  };
-};
-```
-
-Hopefully this helps you get up and running with AngularJS!
