@@ -26,7 +26,7 @@
     "open": "0.0.4",
     "grunt-open": "^0.2.3",
     "grunt": "^0.4.4",
-    "grunt-build-control": "^0.1.2"
+    "grunt-shell": "^0.6.4"
   },
   "scripts": {
     "start": "lineman run",

@@ -26,4 +26,4 @@ module.exports = (lineman) ->
     dev: ["server", "open", "watch"]
 
   appendTasks:
-    dist: ["copy:server", "buildcontrol"]
+    dist: ["copy:server", "shell"]
