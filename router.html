@@ -93,24 +93,7 @@
 
   $routeProvider.<span class="hljs-keyword">when</span> <span class="hljs-string">"/list-of-books"</span>,
     <span class="hljs-attribute">templateUrl</span>: <span class="hljs-string">"books.html"</span>
-    <span class="hljs-attribute">controller</span>: <span class="hljs-string">"BooksController"</span></pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-2">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-2">&#182;</a>
-              </div>
-              <p>uncomment if you want to see an example of a route that resolves a request prior to rendering</p>
-
-            </div>
-            
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-attribute">resolve</span>:
-     books : <span class="hljs-function"><span class="hljs-params">(BookService)</span> -&gt;</span>
-       BookService.get()
+    <span class="hljs-attribute">controller</span>: <span class="hljs-string">"BooksController"</span>
 
   $routeProvider.otherwise <span class="hljs-attribute">redirectTo</span>: <span class="hljs-string">"/login"</span>
   <span class="hljs-keyword">return</span></pre></div></div>
