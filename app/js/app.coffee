@@ -1,7 +1,8 @@
 angular.module("app", [
   "ngResource"
   "ngRoute"
-]).run ($rootScope) ->
+  "restangular"
+]).run ($rootScope, Restangular) ->
   
   # adds some basic utilities to the $rootScope for debugging purposes
   $rootScope.log = (thing) ->

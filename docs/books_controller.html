@@ -58,11 +58,6 @@
                 authentication_service.coffee
               </a>
             
-              
-              <a class="source" href="book_service.html">
-                book_service.coffee
-              </a>
-            
           </div>
         </li>
       </ul>
@@ -83,11 +78,13 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              <p>with $resource</p>
+              <p>with $resource
+angular.module(“app”).controller “BooksController”, ($scope, BookResource) -&gt;</p>
+<h1 id="because-the-stubbed-endpoint-returns-an-array-of-results-query-is-used">because the stubbed endpoint returns an array of results, .query() is used</h1>
+<h1 id="if-the-endpoint-returned-an-object-you-would-use-get-">if the endpoint returned an object, you would use .get()</h1>
+<p> $scope.books = BookResource.query()</p>
 
             </div>
-            
-            <div class="content"><div class='highlight'><pre>angular.<span class="hljs-built_in">module</span><span class="hljs-function"><span class="hljs-params">(<span class="hljs-string">"app"</span>)</span>.<span class="hljs-title">controller</span> "<span class="hljs-title">BooksController</span>", <span class="hljs-params">($scope, BookResource)</span> -&gt;</span></pre></div></div>
             
         </li>
         
@@ -98,27 +95,12 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
-              <p>because the stubbed endpoint returns an array of results, .query() is used
-if the endpoint returned an object, you would use .get()</p>
+              <p>with $http</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  $scope.books = BookResource.query()</pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-3">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-3">&#182;</a>
-              </div>
-              <p>with $http
-angular.module(“app”).controller “BooksController”, ($scope, BookService) -&gt;
-  $scope.books = BookService.getBooks()</p>
-
-            </div>
+            <div class="content"><div class='highlight'><pre>angular.<span class="hljs-built_in">module</span><span class="hljs-function"><span class="hljs-params">(<span class="hljs-string">"app"</span>)</span>.<span class="hljs-title">controller</span> "<span class="hljs-title">BooksController</span>", <span class="hljs-params">($scope, Restangular)</span> -&gt;</span>
+  $scope.books = Restangular.all(<span class="hljs-string">"books"</span>).getList().$object</pre></div></div>
             
         </li>
         

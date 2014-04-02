@@ -4,6 +4,8 @@ path = require("path")
 api = require("./routes/api")
 app = express()
 
+process.env.NODE_ENV = process.env.NODE_ENV or "development"
+
 # express config
 app.set "port", process.env.PORT or 8888
 app.set "view engine", "ejs"
@@ -14,10 +16,13 @@ app.use express.methodOverride()
 app.use app.router
 
 # static files
-app.set "views", __dirname
-app.use express.static(__dirname)
-app.use (req, res) ->
-  res.render "index.html"
+app.configure "production", ->
+  app.set "views", __dirname
+  app.use express.static(__dirname)
+
+app.configure "production", ->
+  app.use (req, res) ->
+    res.render "index.html"
 
 # api
 app.post "/login", api.login

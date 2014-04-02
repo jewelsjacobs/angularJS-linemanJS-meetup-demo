@@ -11,25 +11,5 @@
 # *   defining a spec based on the needs of the client code that emerge.
 # *
 # 
-module.exports = drawRoutes: (app) ->
-  app.post "/login", (req, res) ->
-    res.json message: "logging in!"
-
-  app.post "/logout", (req, res) ->
-    res.json message: "logging out!"
-
-  app.get "/books", (req, res) ->
-    res.json [
-      {
-        title: "Great Expectations"
-        author: "Dickens"
-      }
-      {
-        title: "Foundation Series"
-        author: "Asimov"
-      }
-      {
-        title: "Treasure Island"
-        author: "Stephenson"
-      }
-    ]
+module.exports =
+  drawRoutes: (app) ->
