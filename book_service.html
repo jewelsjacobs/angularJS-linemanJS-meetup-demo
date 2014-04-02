@@ -86,9 +86,12 @@
               
             </div>
             
-            <div class="content"><div class='highlight'><pre>angular.<span class="hljs-built_in">module</span><span class="hljs-function"><span class="hljs-params">(<span class="hljs-string">"app"</span>)</span>.<span class="hljs-title">factory</span> "<span class="hljs-title">BookService</span>", <span class="hljs-params">($q, $http)</span> -&gt;</span>
+            <div class="content"><div class='highlight'><pre>angular.<span class="hljs-built_in">module</span><span class="hljs-function"><span class="hljs-params">(<span class="hljs-string">"app"</span>)</span>.<span class="hljs-title">factory</span> "<span class="hljs-title">BookService</span>", <span class="hljs-params">(Restangular)</span> -&gt;</span>
   <span class="hljs-function"><span class="hljs-title">getBooks</span> = -&gt;</span>
-    $http.get <span class="hljs-string">"/books"</span>
+    Restangular.all<span class="hljs-function"><span class="hljs-params">(<span class="hljs-string">"books"</span>)</span>.<span class="hljs-title">getList</span><span class="hljs-params">()</span>.<span class="hljs-title">then</span> <span class="hljs-params">((books) -&gt;
+      books
+    )</span>, <span class="hljs-title">errorCallback</span> = -&gt;</span>
+      <span class="hljs-built_in">console</span>.log <span class="hljs-string">"something wrong with books service"</span>
 
   <span class="hljs-attribute">getBooks</span>: getBooks</pre></div></div>
             

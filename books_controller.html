@@ -105,7 +105,8 @@ angular.module(“app”).controller “BooksController”, ($scope, BookResourc
             </div>
             
             <div class="content"><div class='highlight'><pre>angular.<span class="hljs-built_in">module</span><span class="hljs-function"><span class="hljs-params">(<span class="hljs-string">"app"</span>)</span>.<span class="hljs-title">controller</span> "<span class="hljs-title">BooksController</span>", <span class="hljs-params">($scope, BookService)</span> -&gt;</span>
-  $scope.books = BookService.getBooks()</pre></div></div>
+  $scope.books = BookService.getBooks()
+  <span class="hljs-built_in">console</span>.log $scope.books</pre></div></div>
             
         </li>
         
