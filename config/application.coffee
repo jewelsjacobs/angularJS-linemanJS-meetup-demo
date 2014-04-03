@@ -26,4 +26,8 @@ module.exports = (lineman) ->
     dev: ["server", "open", "watch"]
 
   appendTasks:
-    dist: ["copy:server", "shell"]
+# uncomment this line to deploy to heroku
+#    dist: ["copy:server", "shell"]
+
+# comment this line to deploy to heroku
+    dist: ["copy:server"]

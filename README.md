@@ -14,6 +14,12 @@ It includes the following features:
 8. Auto generated [sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) with inlined sources via [grunt-concat-sourcemap](https://github.com/kozy4324/grunt-concat-sourcemap) (you'll need to [enable sourcemaps](http://cl.ly/image/1d0X2z2u1E3b) in Firefox/Chrome to see this)
 9. [Unit Tests](https://github.com/linemanjs/lineman-angular-template/tree/master/spec) and [End-to-End Tests](https://github.com/linemanjs/lineman-angular-template/tree/master/spec-e2e)
 10. Configuration to run [Protractor](https://github.com/juliemr/protractor) for End-to-End Tests
+11. [Docco](http://jashkenas.github.io/docco/) CoffeeScript documentation generator
+12. Auto commit generated documentation to Github Pages.
+13. [Restangular](https://github.com/mgonto/restangular) AngularJS module as opposed to $http or $resource
+14. Simple Express backend API consumed via Lineman's server proxy
+15. [Livereload plugin](https://github.com/linemanjs/lineman-livereload)
+16. [Bower plugin](https://github.com/linemanjs/lineman-bower)
 
 # Shown in Demo
 
@@ -24,14 +30,36 @@ It includes the following features:
 
 # Instructions
 
-1. `git clone git@github.com:jewelsjacobs/angularJS-linemanJS-meetup-demo.git my-lineman-app`
-2. `cd my-lineman-app`
-3. `sudo npm install -g lineman`
-4. `sudo npm install -g bower`
-5. `npm install`
-6. `bower install`
-7. `lineman run`
-8. open your web browser to localhost:8000
+1. `$ git clone git@github.com:jewelsjacobs/angularJS-linemanJS-meetup-demo.git my-lineman-app`
+2. `$ cd my-lineman-app`
+3. `$ sudo npm install -g lineman`
+4. `$ sudo npm install -g bower`
+5. `$ npm install`
+6. `$ bower install`
+
+# Running in development mode
+1. `$ export NODE_ENV=development`
+2. `$ node server/server.js`
+3. `$ lineman run`
+4. Your browser will open to localhost:8000
+
+# Running in production mode
+1. `$ export NODE_ENV=production`
+2. `$ node dist/server.js`
+3. `$ lineman build`
+Note: This will deploy to heroku.
+If you don't want to deploy to heroku, follow the instructions on commenting and uncommenting lines 29-33
+in the `/config/application.coffee file
+4. Open your browser to http://localhost:8000
+
+# Deploy to Heroku
+1. `$ cd my-lineman-app`
+2. Follow the instructions on commenting and uncommenting lines 29-33
+   in the `/config/application.coffee file
+3. Follow the [instructions on Heroku for creating a heroku app](https://devcenter.heroku.com/articles/creating-apps) in your app folder.
+4. Follow the [instructions under the Git subtree command section here](https://github.com/yeoman/yeoman/wiki/Deployment)
+to deploy the `dist` folder separately.
+5. `$ lineman build`
 
 # Running Tests
 
