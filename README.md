@@ -87,3 +87,5 @@ To run the end-to-end tests:
     If you see this error: Fatal error: The path to the driver executable must be set by the
     webdriver.chrome.driver system property, you may need to download the chromedriver
     (https://code.google.com/p/selenium/wiki/ChromeDriver) and place it in /usr/local/bin (mac).
+
+[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/jewelsjacobs/)
